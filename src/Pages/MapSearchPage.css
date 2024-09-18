@@ -1,13 +1,3 @@
-.map-container {
-    width: 100%;
-    max-width: 100%; /* Ensures responsiveness */
-    margin: 20px auto; /* Centers the map horizontally and adds margin */
-    padding: 10px;
-    box-sizing: border-box; /* Includes padding in the element's total width and height */
-  }
-  
-  iframe {
-    width: 100%;
-    height: 450px;
-    border: none;
-  }
+iframe {
+  border: none; /* Ensures there is no border around the iframe */
+}
