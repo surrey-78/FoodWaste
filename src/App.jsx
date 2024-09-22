@@ -6,7 +6,7 @@ import CartPage from './Pages/CartPage';
 import FavoritesPage from './Pages/FavoritesPage';
 import MapSearchPage from './Pages/MapSearchPage';
 import HomePage from './Pages/Homepage';
-
+import RestaurantPage from './Pages/RestaurantPage';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -43,6 +43,7 @@ function App() {
           <Route path="/cart" element={<CartPage />} />
           <Route path="/favorites" element={<FavoritesPage />} />
           <Route path="/map" element={<MapSearchPage />} />
+          <Route path="/restaurant/:id" element={<RestaurantPage />} />
         </Routes>
       </main>
     </Router>
