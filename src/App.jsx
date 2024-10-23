@@ -5,8 +5,10 @@ import Header from './Components/Header';
 import CartPage from './Pages/CartPage';
 import FavoritesPage from './Pages/FavoritesPage';
 import MapSearchPage from './Pages/MapSearchPage';
-import HomePage from './Pages/Homepage';
+import HomePage from './Pages/HomePage';
 import RestaurantPage from './Pages/RestaurantPage';
+import LoginPage from './Pages/LoginPage';
+import SignUpPage from './Pages/SignUpPage';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -40,6 +42,8 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/favorites" element={<FavoritesPage />} />
           <Route path="/map" element={<MapSearchPage />} />
