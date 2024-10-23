@@ -6,12 +6,11 @@ const MapSearchPage = () => {
   const navigate = useNavigate();
 
   const handleRestaurantClick = (restaurantId) => {
-    // This will navigate to a new page with the restaurant's food availability details
     navigate(`/restaurant/${restaurantId}`);
   };
 
   return (
-    <div style={{ width: '500%', position: 'relative' }}>
+    <div style={{ width: '1200%', position: 'relative' }}>
       <iframe
         width="100%"
         height="600"
@@ -23,12 +22,101 @@ const MapSearchPage = () => {
         style={{ border: 'none' }}
       ></iframe>
 
-      {/* Overlay clickable markers */}
-      <div className="marker" onClick={() => handleRestaurantClick(1)} style={{ position: 'absolute', top: '300px', left: '400px' }}>
-        <img src="/marker-icon.png" alt="Restaurant Marker" />
+      {/* Restaurant Markers */}
+      <div
+        className="marker"
+        onClick={() => handleRestaurantClick(1)}
+        style={{
+          position: 'absolute',
+          top: '57px', // Positioning for Udupi Hotel Akshaya
+          left: '1304px',
+        }}
+      >
+        <img src="/marker-icon.png" alt="Udupi Hotel Akshaya" />
       </div>
-      <div className="marker" onClick={() => handleRestaurantClick(2)} style={{ position: 'absolute', top: '250px', left: '500px' }}>
-        <img src="/marker-icon.png" alt="Restaurant Marker" />
+
+      <div
+        className="marker"
+        onClick={() => handleRestaurantClick(2)}
+        style={{
+          position: 'absolute',
+          top: '225px', // Positioning for Madurai Kumar Mess
+          left: '1185px',
+        }}
+      >
+        <img src="/marker-icon.png" alt="Madurai Kumar Mess" />
+      </div>
+
+      <div
+        className="marker"
+        onClick={() => handleRestaurantClick(3)}
+        style={{
+          position: 'absolute',
+          top: '262px', // Positioning for Geetham Veg Restaurant
+          left: '1745px',
+        }}
+      >
+        <img src="/marker-icon.png" alt="Geetham Veg Restaurant" />
+      </div>
+
+      <div
+        className="marker"
+        onClick={() => handleRestaurantClick(4)}
+        style={{
+          position: 'absolute',
+          top: '166px', // Positioning for Coal Barbecues
+          left: '1750px',
+        }}
+      >
+        <img src="/marker-icon.png" alt="Coal Barbecues" />
+      </div>
+
+      <div
+        className="marker"
+        onClick={() => handleRestaurantClick(5)}
+        style={{
+          position: 'absolute',
+          top: '237px', // Positioning for Grill Box
+          left: '2490px',
+        }}
+      >
+        <img src="/marker-icon.png" alt="Grill Box" />
+      </div>
+
+      <div
+        className="marker"
+        onClick={() => handleRestaurantClick(6)}
+        style={{
+          position: 'absolute',
+          top: '170px', // Positioning for DR Kitchen
+          left: '1115px',
+        }}
+      >
+        <img src="/marker-icon.png" alt="DR Kitchen" />
+      </div>
+
+      <div
+        className="marker"
+        onClick={() => handleRestaurantClick(6)}
+        style={{
+          position: 'absolute',
+          top: '490px', // Positioning for Diadem
+          left: '1783px',
+        }}
+      >
+        <img src="/marker-icon.png" alt="Dindigal Thalapakatti Biriyani" />
+      </div>
+
+      <div
+        className="marker"
+        onClick={() => handleRestaurantClick(6)}
+        style={{
+          position: 'absolute',
+          top: '16px', // Positioning for Diadem
+          left: '2520px',
+        }}
+      >
+        <img src="/marker-icon.png" alt="Charminar Biriyani Centre" />
       </div>
     </div>
   );
