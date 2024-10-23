@@ -12,10 +12,8 @@ const LoginPage = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     if (userType === 'customer') {
-      // Add customer login logic here
       console.log('Logging in as customer');
     } else if (userType === 'owner') {
-      // Add owner login logic here
       console.log('Logging in as owner');
     }
     navigate('/');
@@ -23,49 +21,50 @@ const LoginPage = () => {
 
   return (
     <div className="page login-page">
-      <h1>Login</h1>
-      <form onSubmit={handleLogin}>
-        <div>
-          <label>User Type:</label>
-          <select 
-            value={userType} 
-            onChange={(e) => setUserType(e.target.value)} 
-            style={{ padding: '8px', marginBottom: '10px' }}
-          >
-            <option value="customer">Customer</option>
-            <option value="owner">Owner</option>
-          </select>
+      <div className="login-container">
+        <h1>Login</h1>
+        <form onSubmit={handleLogin}>
+          <div className="form-group">
+            <label>User Type:</label>
+            <select 
+              value={userType} 
+              onChange={(e) => setUserType(e.target.value)} 
+              className="form-input"
+            >
+              <option value="customer">Customer</option>
+              <option value="owner">Owner</option>
+            </select>
+          </div>
+          <div className="form-group">
+            <label>Email:</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              placeholder="Enter your email"
+              className="form-input"
+            />
+          </div>
+          <div className="form-group">
+            <label>Password:</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              placeholder="Enter your password"
+              className="form-input"
+            />
+          </div>
+          <button type="submit" className="btn">Login</button>
+        </form>
+        <div className="signup-link">
+          <p>
+            Don't have an account? 
+            <a href="/signup"> Sign up </a>
+          </p>
         </div>
-        <div>
-          <label>Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            placeholder="Enter your email"
-            style={{ padding: '8px', marginBottom: '10px' }}
-          />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-            placeholder="Enter your password"
-            style={{ padding: '8px', marginBottom: '10px' }}
-          />
-        </div>
-        <button type="submit" className="btn">Login</button>
-      </form>
-      <div className="signup-link">
-        <p>
-          Don't have an account? 
-          <a href="/signup/customer"> Sign up as Customer </a> or 
-          <a href="/signup/owner"> Sign up as Owner</a>
-        </p>
       </div>
     </div>
   );

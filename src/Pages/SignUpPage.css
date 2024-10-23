@@ -1,80 +1,61 @@
-/* General page styling */
+/* src/Pages/SignUp.css */
 .page.signup-page {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
-    background-color: #f7f7f7; /* Light background */
-    padding: 20px;
+    align-items: center;
+    height: 100vh; /* Full page height */
+    background-color: #f5f5f5;
   }
   
-  /* Form styling */
-  form {
-    background-color: #fff; /* White background for form */
-    padding: 20px;
-    border-radius: 10px;
+  .signup-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
-    display: flex;
-    flex-direction: column;
   }
   
-  form h1 {
+  h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #333; /* Darker text color */
   }
   
-  /* Input fields */
-  form label {
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: #555; /* Slightly darker for contrast */
-  }
-  
-  form input,
-  form select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+  .form-group {
     margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-input {
     width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
   }
   
-  form input:focus,
-  form select:focus {
-    outline: none;
-    border-color: #007bff; /* Highlight color when focused */
-  }
-  
-  /* Button styling */
-  form .btn {
-    padding: 10px 20px;
+  .btn {
+    width: 100%;
+    padding: 10px;
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
   }
   
-  form .btn:hover {
+  .btn:hover {
     background-color: #0056b3;
   }
   
-  /* Link to login page */
   .login-link {
-    margin-top: 15px;
     text-align: center;
-  }
-  
-  .login-link p {
-    font-size: 14px;
-    color: #555;
+    margin-top: 20px;
   }
   
   .login-link a {
@@ -85,12 +66,4 @@
   .login-link a:hover {
     text-decoration: underline;
   }
-  
-  /* Responsive design for mobile */
-  @media (max-width: 768px) {
-    form {
-      width: 90%;
-    }
-  }
-  
   
