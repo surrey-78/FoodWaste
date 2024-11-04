@@ -1,201 +1,37 @@
-/* Define CSS Variables for Light Theme (Default) */
-:root {
-  --background-color: #f9f9f9;
-  --text-color: #333;
-  --header-background: #ffffff;
-  --navbar-color: #333;
-  --hover-color: #007bff;
-  --card-background: #fff;
-  --footer-background: #f8f8f8;
-  --border-color: #e0e0e0;
-}
-
-/* Dark Theme Variables */
-.dark-theme {
-  --background-color: #1a1a1a;
-  --text-color: #f0f0f0;
-  --header-background: #333;
-  --navbar-color: #f0f0f0;
-  --hover-color: #4db8ff;
-  --card-background: #2e2e2e;
-  --footer-background: #333;
-  --border-color: #555;
-}
-
-/* Apply theme colors using the variables */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-}
-
+/* Default Light Theme Styles */
 body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  transition: background-color 0.3s, color 0.3s;
+  background-color: #ffffff; /* Light background */
+  color: #333333; /* Dark text */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
-/* Header/Navbar Styling */
+/* Dark Theme Styles */
+body.dark-theme {
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* Light text */
+}
+
+/* Header Styling */
 header {
-  width: 100%;
-  background-color: var(--header-background);
-  border-bottom: 2px solid var(--border-color);
-  padding: 20px 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+  background-color: #f8f9fa; /* Light header background */
+  transition: background-color 0.3s; /* Smooth transition */
 }
 
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+body.dark-theme header {
+  background-color: #1e1e1e; /* Dark header background */
 }
 
-nav ul li {
-  margin: 0 20px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: var(--navbar-color);
-  font-size: 18px;
-  font-weight: 500;
-  padding: 10px;
-}
-
-nav ul li a:hover {
-  color: var(--hover-color);
-  border-bottom: 2px solid var(--hover-color);
-  transition: 0.3s ease;
-}
-
-/* Main Content Styling */
+/* Main Content Area */
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin-top: 80px; /* To avoid overlap with fixed header */
   padding: 20px;
-  text-align: center;
 }
 
-/* Theme Toggle Button Styling */
-button.theme-toggle {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  padding: 10px 20px;
-  cursor: pointer;
-  background-color: var(--hover-color);
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+/* Button Styling for Theme Toggle */
+button {
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
-/* Search Map Button Styling */
-button.search-map {
-  position: fixed;
-  top: 50px; /* Adjust as needed to avoid overlapping */
-  right: 10px;
-  padding: 10px 20px;
-  cursor: pointer;
-  background-color: var(--hover-color);
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-/* Page Header Styling */
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: var(--hover-color);
-}
-
-p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-
-/* Responsive grid layout for pages */
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  justify-items: center;
-}
-
-.container div {
-  background-color: var(--card-background);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.container div:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Footer Styling */
-footer {
-  background-color: var(--footer-background);
-  padding: 20px;
-  text-align: center;
-  width: 100%;
-  margin-top: 50px;
-  border-top: 1px solid var(--border-color);
-}
-
-footer p {
-  font-size: 1rem;
-}
-
-/* Responsive Design for Mobile */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  .container {
-    grid-template-columns: 1fr;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
-  button.theme-toggle,
-  button.search-map {
-    top: 10px; /* Adjust positioning for mobile */
-    right: 10px;
-    padding: 8px 16px;
-  }
+button.dark-theme {
+  background-color: #555; /* Dark button background */
+  color: #fff; /* Light button text */
 }

@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './Components/Header';
-import CartPage from './Pages/CartPage';
-import FavoritesPage from './Pages/FavoritesPage';
 import MapSearchPage from './Pages/MapSearchPage';
 import HomePage from './Pages/HomePage';
 import RestaurantPage from './Pages/RestaurantPage';
@@ -15,8 +13,8 @@ function App() {
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
-    document.body.classList.toggle('dark-theme');
-  };
+    document.body.classList.toggle('dark-theme'); // This line applies the dark theme class
+  };  
 
   return (
     <Router>
@@ -44,8 +42,6 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignUpPage />} />
-          <Route path="/cart" element={<CartPage />} />
-          <Route path="/favorites" element={<FavoritesPage />} />
           <Route path="/map" element={<MapSearchPage />} />
           <Route path="/restaurant/:id" element={<RestaurantPage />} />
         </Routes>

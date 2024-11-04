@@ -1,0 +1,21 @@
+/* restaurantPage.css */
+
+/* Ensure it fills the viewport */
+.restaurant-page {
+    min-height: 100vh; /* Full height to cover the screen */
+    padding: 20px; /* Add some padding */
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+  
+  /* Light Theme */
+  .restaurant-page {
+    background-color: #ffffff; /* Light background for the restaurant page */
+    color: #333; /* Dark text */
+  }
+  
+  /* Dark Theme */
+  body.dark-theme .restaurant-page {
+    background-color: #121212; /* Dark background for the restaurant page */
+    color: #ffffff; /* Light text */
+  }
+  
